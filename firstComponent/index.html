@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Component 1</title>
+    <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-dom-factories@1.0.0/index.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="text/javascript">
+  
+    class Cross extends React.Component {
+        render(){
+            const h2 = ReactDOMFactories.h2(null, "Ancient Cross Ankh - the Symbol of infinite life");
+            const img = ReactDOMFactories.img({
+                src: "https://www.iconspng.com/images/eye-of-ra-ankh-ojo-de-ra-ankh/eye-of-ra-ankh-ojo-de-ra-ankh.jpg",
+                alt: "Ankh cross"
+            });
+            return ReactDOMFactories.div(null, h2, img);
+        }
+    }
+    
+    ReactDOM.render(React.createElement(Cross), document.getElementById("app"));
+  
+  </script>
+
+<style>
+    img{
+        width:500px; height: auto;
+    }
+</style>
+
+</body>
+
+</html>
