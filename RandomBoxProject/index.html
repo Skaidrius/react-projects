@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ancient Cross with JSX JS and CSS</title>
+    <link rel="stylesheet" href="randomBox.css">
+    <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  
+  <script type="text/babel">
+  
+    class RandomBox extends React.Component{
+        render(){
+            const fontSize = Math.floor(Math.random()*60) + 20;
+            const backgroundColor = ['red', 'yellow', 'green', 'teal', 'navy'][Math.floor(Math.random()*5)];
+            return(
+                <div style = {{
+                    fontSize: `${fontSize}px`,
+                    backgroundColor,
+                    color:'white',
+                    display:'flex',
+                    alignItems: 'center',
+                    justifyContent:'center',
+                    height:'200px',
+                    width:'500px',
+                }}>
+                    Random box
+                </div>
+            );
+        }
+    } 
+    
+    ReactDOM.render(<RandomBox />, document.getElementById("app"));
+  
+  </script>
+
+<style>
+    img{
+        width:500px; height: auto;
+    }
+</style>
+
+</body>
+
+</html>
