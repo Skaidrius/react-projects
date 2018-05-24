@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ancient Cross with JSX JS and CSS</title>
+    <link rel="stylesheet" href="first-component.css">
+    <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  
+  <script type="text/babel">
+  
+    class Cross extends React.Component {
+        render(){
+            const liStyle = { fontSize: '1.5em' };
+            return (
+                <div className="card">
+                    <h2 className="name">Ancient Cross Ankh - the Symbol of infinite life</h2>
+                    <img  src="https://www.iconspng.com/images/eye-of-ra-ankh-ojo-de-ra-ankh/eye-of-ra-ankh-ojo-de-ra-ankh.jpg" 
+                          alt= "Ankh cross" />
+                    <h5 style={{fontSize: "2em", margin: "2px"}}>Meanings</h5>
+                    <ul>
+                        <li style = { liStyle } >Infinite life</li>
+                        <li style = { liStyle } >Rebirth</li>
+                        <li style = { liStyle } >Youth</li>
+                    </ul>
+                </div>
+            )
+        }
+    }
+    
+    ReactDOM.render(<Cross />, document.getElementById("app"));
+  
+  </script>
+
+<style>
+    img{
+        width:500px; height: auto;
+    }
+</style>
+
+</body>
+
+</html>
