@@ -15,21 +15,29 @@
   <div id="app"></div>
   
   <script type="text/babel">
-  
+    
+    class MeaningsList extends React.Component{
+        render(){
+            const meanings = ['Infinite life', "Rebirth", 'Youth'];
+            const style = { fontSize: '1.5em' };
+            return(                    
+                <ul>
+                    {meanings.map((h, i)=> {
+                        return <li key = {i} style={style}>{h}</li>
+                    })}
+                </ul>
+            );
+        }
+    }
+    
     class Cross extends React.Component {
         render(){
-            const liStyle = { fontSize: '1.5em' };
             return (
                 <div className="card">
                     <h2 className="name">Ancient Cross Ankh - the Symbol of infinite life</h2>
-                    <img  src="https://www.iconspng.com/images/eye-of-ra-ankh-ojo-de-ra-ankh/eye-of-ra-ankh-ojo-de-ra-ankh.jpg" 
-                          alt= "Ankh cross" />
+                    <img  src="https://www.iconspng.com/images/eye-of-ra-ankh-ojo-de-ra-ankh/eye-of-ra-ankh-ojo-de-ra-ankh.jpg" />
                     <h5 style={{fontSize: "2em", margin: "2px"}}>Meanings</h5>
-                    <ul>
-                        <li style = { liStyle } >Infinite life</li>
-                        <li style = { liStyle } >Rebirth</li>
-                        <li style = { liStyle } >Youth</li>
-                    </ul>
+                    <MeaningsList />
                 </div>
             )
         }
